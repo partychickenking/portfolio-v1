@@ -1,0 +1,760 @@
+/*ALGEMENE STYLING*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    color: #eee;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url("./images/sitebg.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: black;
+}
+
+img {
+    width: 100%;
+}
+
+/*REUSABLE classes*/
+.container {
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+.section-heading h1 {
+    font-size: 3.5rem;
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.section-heading h1::before,
+.section-heading h1::after {
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-heading h1::before {
+    width: 10rem;
+    height: 3px;
+    border-radius: .8rem;
+}
+
+.section-heading h1::after {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    bottom: -1rem;
+}
+
+.section-heading h2 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: black;
+}
+
+.has-margin-right {
+    margin-right: 5rem;
+}
+
+/*START HEADER*/
+
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+.top-nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    z-index: 50;
+    background-color: #16162d;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 658ms cubic-bezier(1, 0, 0, 1);
+}
+
+.nav-list {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    margin: 0 2rem;
+}
+
+.nav-link {
+    font-size: 5rem;
+    padding: 1rem;
+    transition-duration: 650ms;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #61c2a2;
+}
+
+.top-nav.open {
+    top: 0;
+    border-radius: initial;
+}
+
+.menu-toggler {
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+}
+
+.menu-toggler.open {
+    transform: rotate(-45deg);
+}
+
+.bar {
+    background: linear-gradient(to right, #1d617a, #61c2a2);
+    width: 100%;
+    height: 4px;
+    border-radius: .8rem;
+}
+
+.bar.half {
+    width: 50%;
+}
+
+.bar.start {
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.start {
+    transform: rotate(-90deg) translateX(.8rem);
+}
+
+.bar.end {
+    align-self: flex-end;
+    transform-origin: left;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.end {
+    transform: rotate(-90deg) translateX(-.8rem);
+}
+
+.landing-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.landing-text h1 {
+    font-size: 20rem;
+    font-family: 'Nunito', sans-serif;
+    padding: 1rem;
+    user-select: none;
+    color: black;
+}
+
+.landing-text h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: black;
+}
+
+/*ABOUT styling*/
+
+.about .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-heading {
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+    margin-bottom: 6rem;
+}
+
+.about-heading h1 {
+    font-size: 10rem;
+    color: black;
+}
+
+.about-heading h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    flex: 1;
+}
+
+.profile-img img{
+    width: 30rem;
+}
+
+.about-details {
+    flex: 1;
+}
+
+.social-media {
+    margin-top: 5rem;
+}
+
+.social-media i {
+    font-size: 5rem;
+    color: #1d617a;
+    transition: color 650ms;
+}
+
+.fa-envelope-square:hover {
+    color: #0073C6;
+}
+
+.fa-linkedin:hover {
+    color: #0073B1;
+}
+
+.fa-whatsapp-square:hover {
+    color: #45E762;
+}
+
+/*SERVICES STYLING*/
+
+.my-skills {
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5 rem;
+    text-align: center;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.skill h1 {
+    color: black;
+    letter-spacing: 2px;
+    margin: 2rem -2px 2rem 0;
+}
+
+.icon-container {
+    width: 10rem;
+    height: 10rem;
+    border: 3px solid #1d617a;
+    background-color: #61c2a2;
+    margin-bottom: 2rem;
+    display: flex;
+    border-radius: 100%;
+}
+
+.icon-container i {
+    color: #dbefe1;
+    font-size: 5rem;
+    margin: auto;
+}
+
+/*PORTFOLIO STYLING*/
+
+.portfolio-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.portfolio-item:last-child {
+    margin-bottom: 0;
+}
+
+.portfolio-description h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    color: black;
+}
+
+.portfolio-description h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: .3;
+    color: black;
+}
+
+.portfolio-description .cta {
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #3882ff;
+    transition: color 650ms;
+}
+
+.portfolio-description .cta:hover {
+    color: #2f67cd;
+}
+
+/*Timeline styling*/
+
+.timeline ul {
+    border-left: 4px solid #61c2a2;
+    border-radius: .8rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    position: relative;
+    padding: 5rem;
+    list-style: none;
+    text-align: left;
+    width: 70%;
+}
+
+.timeline h1 {
+    font-size: 2rem;
+    color: black;
+    letter-spacing: 2px;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.timeline h1 span {
+    letter-spacing: 0px;
+    font-weight: 200;
+}
+
+/*CONTACT STYLING*/
+
+.contact .container .section-heading h1, .contact .container .section-heading h2{
+    color: white;
+}
+
+.contact {
+    background-color: #16162d;
+}
+
+form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+form label {
+    font-size: 1.5rem;
+    font-family: "Nunito", sans-serif;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 5px;
+    border: none;
+    outline-color: #fd57bf;
+    border-radius: .8rem;
+}
+
+input[type="submit"] {
+    width: initial;
+    background-color: #3882ff;
+    color: #eee;
+    padding: 1rem 2rem;
+    border-radius: .8rem;
+    cursor: pointer;
+    transition: background-color 650ms
+}
+
+input[type="submit"]:hover {
+    color: #221e3f;
+    background-color: #ffe838;
+}
+
+.contact .container p{
+    color: white;
+    text-align: center;
+}
+
+.contact .container p a:hover{
+    cursor: pointer;
+    -webkit-animation:rainbow 1s infinite;
+    -ms-animation:rainbow 1s infinite;
+    -o-animation:rainbow 1s infinite;
+    animation:rainbow 1s infinite;
+    }
+
+@-webkit-keyframes rainbow {
+    0% {color: #ff0000;}
+    10% {color: #ff8000;}
+    20% {color: #ffff00;}
+    30% {color: #80ff00;}
+    40% {color: #00ff00;}
+    50% {color: #00ff80;}
+    60% {color: #00ffff;}
+    70% {color: #0080ff;}
+    80% {color: #0000ff;}
+    90% {color: #8000ff;}
+    100% {color: #ff0080;}
+}
+
+@-ms-keyframes rainbow {
+    0% {color: #ff0000;}
+    10% {color: #ff8000;}
+    20% {color: #ffff00;}
+    30% {color: #80ff00;}
+    40% {color: #00ff00;}
+    50% {color: #00ff80;}
+    60% {color: #00ffff;}
+    70% {color: #0080ff;}
+    80% {color: #0000ff;}
+    90% {color: #8000ff;}
+    100% {color: #ff0080;}
+}
+
+@-o-keyframes rainbow {
+    0% {color: #ff0000;}
+    10% {color: #ff8000;}
+    20% {color: #ffff00;}
+    30% {color: #80ff00;}
+    40% {color: #00ff00;}
+    50% {color: #00ff80;}
+    60% {color: #00ffff;}
+    70% {color: #0080ff;}
+    80% {color: #0000ff;}
+    90% {color: #8000ff;}
+    100% {color: #ff0080;}
+}
+
+@keyframes rainbow {
+    0% {color: #ff0000;}
+    10% {color: #ff8000;}
+    20% {color: #ffff00;}
+    30% {color: #80ff00;}
+    40% {color: #00ff00;}
+    50% {color: #00ff80;}
+    60% {color: #00ffff;}
+    70% {color: #0080ff;}
+    80% {color: #0000ff;}
+    90% {color: #8000ff;}
+    100% {color: #ff0080;}
+}
+
+/*FOOTER STYLING*/
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.copyright p{
+    color: white;
+}
+
+.up {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background: #eee;
+    top: -2.5rem;
+    right: 5rem;
+    border-radius: 100%;
+    display: flex;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.up i {
+    color: #16162d;
+    font-size: 2rem;
+    margin: auto;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(56, 130, 255, 0.99);
+    }
+
+    70% {
+        box-shadow: 0 0 0 2rem rgba(56, 130, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(56, 130, 255, 0);
+    }
+}
+
+.copyright p {
+    font-size: 1.3rem;
+}
+
+/*TABLET FORMAAT*/
+
+@media screen and (max-width: 768px) {
+    body {
+        background: url(images/sitebg2.jpg) no-repeat center fixed;
+        background-size: cover;
+    }
+
+    .landing-text h1 {
+        font-size: 15rem;
+    }
+
+    .landing-text h2 {
+        1.7rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    li {
+        margin: 2rem 0;
+    }
+
+    .nav-link {
+        font-size: 4.5rem;
+    }
+
+    .about-heading h1 {
+        font-size: 8rem;
+    }
+
+    .section-heading h1 {
+        font-size: 1rem;
+    }
+
+    .about-details .nav-list {
+        flex-direction: initial;
+    }
+
+    .about-details {
+        margin: 0 2rem;
+    }
+
+    .icon-container {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .icon-container i {
+        font-size: 4rem;
+    }
+
+    .timeline ul {
+        margin: 0 0 0 auto;
+    }
+
+    .timeline .date::before {
+        left: -20rem;
+    }
+
+    .timeline .date::after {
+        left: -5.9;
+    }
+}
+
+/*TELEFOON FORMAAT*/
+
+@media screen and (max-width: 600px) {
+    .menu-toggler {
+        top: 2rem;
+        right: 2rem;
+    }
+    
+    .landing-text h1{
+        font-size: 8rem;
+    }
+    
+    .landing-text h2{
+        font-size: 1.4rem;
+    }
+    
+    .nav-link{
+        font-size: 3.5rem;
+    }
+    
+    .about .container{
+        flex-direction: column;
+    }
+    
+    .profile-img{
+        margin: 0 0 7rem 0;
+    }
+    
+    .portfolio-item{
+        flex-direction: column;
+    }
+    
+    .portfolio-img{
+        margin: 0 0 2rem 0;
+        order: 1;
+    }
+    
+    .portfolio-description{
+        margin: 0;
+        order: 2;
+    }
+    
+    .timeline p{
+        font-size: 1.6rem;
+    }
+    
+    .timeline .date::before{
+        font-size: 1.4rem;
+    }
+    
+    form{
+        width: 100%;
+    }
+    
+    .up{
+        right: 2rem;
+    }
+}
+
+/*STYLING SECOND DETAILPAGE*/
+.details-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.details-description h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    color: black;
+}
+
+.details-description h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: .3;
+    color: black;
+}
+
+.details-description .cta {
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #3882ff;
+    transition: color 650ms;
+}
+
+.details-description .cta:hover {
+    color: #2f67cd;
+}
+
+.details-item:last-child{
+    margin-bottom: 10rem;
+}
+
+.details-description p{
+    margin-right: 10rem;
+}
+
+.details .container .section-heading h2 a{
+    color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

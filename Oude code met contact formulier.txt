@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inju Michorius</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu-toggler">
+            <div class="bar half start"></div>
+            <div class="bar"></div>
+            <div class="bar half end"></div>
+        </div>
+        <nav class="top-nav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="landing-text">
+            <h1>Inju Michorius</h1>
+            <h2>UI, UX en Web Developer</h2>
+        </div>
+    </header>
+    <section class="about" id="about">
+        <div class="container">
+            <div class="profile-img" data-aos="fade-right" data-aos-delay="300">
+                <img src="./images/profile.jpg" alt="">
+            </div>
+            <div class="about-details" data-aos="fade-left" data-aos-delay="600">
+                <div class="about-heading">
+                    <h1>About</h1>
+                    <h2>Myself</h2>
+                    <p>Ik ben een enthousiaste, leergierige tweedejaars Communicatie en Multimedia student. Met mijn
+                        logische kijk op projecten kom ik sneller tot een slimme oplossing. Dankzij mijn werkervaring op
+                        de markt heb ik uitstekende sociale vaardigheden.</p>
+                    <div class="social-media">
+                        <ul class="nav-list">
+                            <li>
+                                <a href="mailto:inju@hotmail.nl" class="icon-link">
+                                    <i class="fas fa-envelope-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="icon-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/310642911029" class="icon-link">
+                                    <i class="fab fa-whatsapp-square"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-heading">
+                <h1>Services</h1>
+                <h2>Wat ik voor u kan betekenen</h2>
+            </div>
+            <div class="my-skills">
+                <div class="skill" data-aos="fade-in" data-aos-delay="300">
+                    <div class="icon-container">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h1>Web Design</h1>
+                    <p>Ik heb ervaring met html en css, en vind frontend een van de interessantste dingen op mijn
+                        vakgebied</p>
+                </div>
+                <div class="skill" data-aos="fade-in" data-aos-delay="600">
+                    <div class="icon-container">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h1>Web Development</h1>
+                    <p>Ook heb ik ervaring met het maken van een server, het schrijven van Javascript en het gebruik van
+                        npm</p>
+                </div>
+                <div class="skill" data-aos="fade-in" data-aos-delay="900">
+                    <div class="icon-container">
+                        <i class="fas fa-compress"></i>
+                    </div>
+                    <h1>Animation</h1>
+                    <p>Ten slotte haal ik veel plezier uit animaties maken en filmproductie. Hiervoor gebruik ik After
+                        Effects en Sony Vegas pro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-heading">
+                <h1>Portfolio</h1>
+                <h2>Mijn recente werken</h2>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
+                    <img src="./images/portitem1.jpg" alt="">
+                </div>
+                <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
+                    <h2>Web Development</h2>
+                    <h1>LowLands</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nihil maxime accusantium,
+                        sunt reprehenderit.</p>
+                    <a href="#" class="cta">View Details</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-description" data-aos="fade-right" data-aos-delay="900">
+                    <h2>Web Design</h2>
+                    <h1>Layout</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nihil maxime accusantium,
+                        sunt reprehenderit.</p>
+                    <a href="#" class="cta">View Details</a>
+                </div>
+                <div class="portfolio-img" data-aos="fade-left" data-aos-delay="1200">
+                    <img src="./images/portitem2.jpeg" alt="">
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="1500">
+                    <img src="./images/portitem3.jpeg" alt="">
+                </div>
+                <div class="portfolio-description has-margin-right" data-aos="fade-left" data-aos-delay="1800">
+                    <h2>Web Design</h2>
+                    <h1>Product Sketch</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nihil maxime accusantium,
+                        sunt reprehenderit.</p>
+                    <a href="#" class="cta">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-heading">
+                <h1>Werk ervaring</h1>
+                <h2>Oude en recente baantjes</h2>
+            </div>
+            <div class="timeline" data-aos="fade-down" data-aos-delay="300">
+                <ul>
+                    <li class="date">
+                        <h1>HvA <span>2019 - Heden</span></h1>
+                        <p>Studenten helpen met het optimaliseren van hun code,
+                            werk beoordelen en concept beoordelen.</p>
+                    </li>
+                    <li class="date">
+                        <h1>Notenkraam <span>2018 - Heden</span></h1>
+                        <p>Als marktverkoper hield ik mij bezig met het verkopen
+                            van noten en zuidvruchten. Mijn taken en
+                            verantwoordelijkheden: bijvullen noten, kassa bedienen,
+                            pauzes regelen en vrachtwagen in/uitladen.</p>
+                    </li>
+                    <li class="date">
+                        <h1>Mcdonald's  <span>2016 - 2018</span></h1>
+                        <p>Als Allround expert assisteerde ik de sales manager in
+                            het restaurant. Mijn taken en verantwoordelijkheden:
+                            nieuwe crew inwerken, kassa bedienen, burgers
+                            samenstellen en bevoorrading</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-heading">
+                <h1>Contact</h1>
+                <h2>Laten we samen werken!</h2>
+            </div>
+            <form action="post" data-aos="fade-up" data-aos-delay="300">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="service">Services:</label>
+                <select name="service" id="service">
+                    <option value="">Web Design</option>
+                    <option value="">Web Development</option>
+                    <option value="">Web Design/Development</option>
+                </select>
+
+                <label for="subject">Subject:</label>
+                <textarea name="subject" id="subject" cols="10" rows="10"></textarea>
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </section>
+    <footer class="copyright">
+        <div class="up" id="up">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+        <p>Copright: Inju Michorius 2020</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
